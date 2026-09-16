@@ -746,8 +746,16 @@ img { max-width: 100%; display: block; }
   font-size: 2.4rem;
 }
 .album-card .card-body { padding: 1.6rem 1.6rem 1.8rem; display: flex; flex-direction: column; flex: 1; }
-.album-card h3 { font-size: 1.5rem; margin-bottom: 0.3em; }
-.album-card .bridge { color: var(--cocoa-soft); font-style: italic; margin: 0 0 1rem; }
+.album-card h3 { font-size: 1.5rem; margin-bottom: 0.25em; }
+.album-card .sub {
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--sage-deep);
+  margin: 0 0 0.9rem;
+}
+.album-card .bridge { color: var(--cocoa-soft); font-style: italic; margin: 0 0 1.4rem; }
 .album-card .entries { list-style: none; padding: 0; margin: 0 0 1.3rem; font-size: 0.92rem; }
 .album-card .entries li { padding: 0.28rem 0 0.28rem 1.3rem; position: relative; color: var(--cocoa); }
 .album-card .entries li::before { content: "•"; position: absolute; left: 0.2rem; color: var(--terracotta); font-weight: 800; }
