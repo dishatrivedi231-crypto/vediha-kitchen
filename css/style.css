@@ -631,6 +631,24 @@ img { max-width: 100%; display: block; }
   gap: 1.6rem;
   margin: 1.8rem 0;
 }
+
+/* Native inline video (self-hosted clips) */
+.chapter-video { margin: 2.2rem 0; }
+.chapter-video video {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  background: #000;
+  max-height: 80vh;
+}
+.chapter-video .cap {
+  text-align: center;
+  font-style: italic;
+  color: var(--cocoa-soft);
+  margin: 0.6rem 0 0;
+  font-size: 0.92rem;
+}
 .video-item .cap { text-align: center; font-style: italic; color: var(--cocoa-soft); margin: 0.6rem 0 0; font-size: 0.92rem; }
 
 /* ============================================================
