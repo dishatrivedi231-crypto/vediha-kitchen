@@ -13,17 +13,38 @@ if (toggle && links) {
   });
 }
 
-// Newsletter (no backend — friendly confirmation only)
-const form = document.querySelector('.newsletter form');
-if (form) {
-  form.addEventListener('submit', (e) => {
+// Forms — delivered to the parent inbox via FormSubmit (no backend needed)
+const PARENT_ENDPOINT = 'https://formsubmit.co/ajax/amit.agr.ca@gmail.com';
+document.querySelectorAll('form[data-formsubmit]').forEach((form) => {
+  const note = form.querySelector('.form-note') || (form.parentElement && form.parentElement.querySelector('.form-note'));
+  const isContact = form.classList.contains('contact-form');
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const note = form.parentElement.querySelector('.form-note');
-    const input = form.querySelector('input');
-    if (note) note.textContent = `Thanks for subscribing, ${input.value.split('@')[0]}! 🧁`;
-    form.reset();
+    const btn = form.querySelector('button[type="submit"]');
+    const data = Object.fromEntries(new FormData(form).entries());
+    data._subject = form.dataset.subject || 'Vedhica’s Kitchen — form';
+    data._template = 'box';
+    data._captcha = 'false';
+    if (note) { note.style.color = ''; note.textContent = 'Sending…'; }
+    if (btn) btn.disabled = true;
+    try {
+      const res = await fetch(PARENT_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      if (!res.ok) throw new Error('bad status');
+      form.reset();
+      if (note) note.textContent = isContact
+        ? 'Thank you! Your message is on its way. 🧁'
+        : 'Thanks for subscribing! 🧁';
+    } catch (err) {
+      if (note) { note.style.color = 'var(--terracotta)'; note.textContent = "Hmm, that didn't send — please try again in a moment."; }
+    } finally {
+      if (btn) btn.disabled = false;
+    }
   });
-}
+});
 
 // Recipe ingredient check-off
 document.querySelectorAll('.ingredients li').forEach((li) => {

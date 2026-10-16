@@ -82,9 +82,22 @@
           climb. Have an event or a cause that could use a batch of cupcakes? A grown-up looks
           after all the arrangements — reach out below and it'll land in a parent's inbox.
         </p>
-        <p style="text-align:center;margin-top:1.6rem;">
-          <a href="mailto:parent@example.com?subject=Vedhica's%20Kitchen%20—%20Charity%20enquiry" class="btn">Contact a grown-up about an event</a>
-        </p>
+        <form class="contact-form" data-formsubmit data-subject="Vedhica's Kitchen — new message">
+          <div class="field">
+            <label for="cf-name">Your name</label>
+            <input id="cf-name" type="text" name="name" required placeholder="Who's writing?">
+          </div>
+          <div class="field">
+            <label for="cf-email">Your email</label>
+            <input id="cf-email" type="email" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="4" required placeholder="Tell us about your event or just say hello…"></textarea>
+          </div>
+          <button type="submit" class="btn">Send to a grown-up</button>
+          <p class="form-note"></p>
+        </form>
 
         <div class="safety-note">
           <strong>A note for grown-ups:</strong> Vedhica is a young baker, so a parent manages all

@@ -35,12 +35,11 @@
     <div class="container">
       <p class="eyebrow">Good Vibes &amp; Velvety Wonders</p>
       <h1>Turning kitchen mistakes<br>into kindness</h1>
-      <p class="sub">A ten-year-old who turned kitchen mistakes into kindness — one eggless, sugar-free cupcake at a time.</p>
+      <p class="sub">Eggless and sugar-free bakes, real kitchen stories, and cupcakes for charity — from a young baker in Dubai.</p>
       <a href="the-journey.html" class="btn">Start the Story</a>
       <a href="recipes.html" class="btn btn--ghost">Browse Recipes</a>
       <div class="hero-photo">
-        <span class="ph-emoji">🧁</span>
-        <small>Hero photo goes here</small>
+        <img src="assets/hero.jpg" alt="Vedhica in her apron holding a whisk and measuring cups in the kitchen">
       </div>
     </div>
   </section>
@@ -105,22 +104,31 @@
         <p>Simple, tested and made with love — including plenty of eggless and sugar-free bakes.</p>
       </div>
       <div class="recipe-grid">
-        <a href="recipes/fluffy-pancakes.html" class="recipe-card">
-          <div class="thumb">🥞</div>
+        <a href="recipes/almond-cake-mamas-savior.html" class="recipe-card">
+          <div class="thumb" style="background-image:url('assets/journey/ch4/almond-cake-mamas-savior.jpg');background-size:cover;background-position:center;"></div>
           <div class="body">
-            <span class="tag">Batter &amp; Bowls</span>
-            <h3>Fluffy Buttermilk Pancakes</h3>
-            <p>Her weekend-morning ritual, made completely independently.</p>
-            <div class="meta"><span>⏱ 20 min</span><span>🍽 Serves 3</span></div>
+            <span class="tag">Sugar-Free · Eggless</span>
+            <h3>Almond Cake — "Mama's Savior"</h3>
+            <p>No sugar, no egg — the cake her mum actually asks for.</p>
+            <div class="meta"><span>⏱ 45 min</span><span>🍽 Serves 8</span></div>
           </div>
         </a>
-        <a href="recipes/vanilla-cupcakes.html" class="recipe-card">
-          <div class="thumb">🧁</div>
+        <a href="recipes/velvety-wonders-cupcakes.html" class="recipe-card">
+          <div class="thumb" style="background-image:url('assets/journey/ch5/velvety-wonders-cupcake.jpg');background-size:cover;background-position:center;"></div>
+          <div class="body">
+            <span class="tag">Eggless Option</span>
+            <h3>Velvety Wonders Cupcakes</h3>
+            <p>Her charity batch — glossy ganache, with dairy-free swaps.</p>
+            <div class="meta"><span>⏱ 45 min</span><span>🍽 Makes ~12</span></div>
+          </div>
+        </a>
+        <a href="recipes/chocolate-chip-cookies.html" class="recipe-card">
+          <div class="thumb" style="background-image:url('assets/journey/ch3/cookie-box.jpg');background-size:cover;background-position:center;"></div>
           <div class="body">
             <span class="tag">Oven Magic</span>
-            <h3>Classic Vanilla Cupcakes</h3>
-            <p>Soft, buttery sponges topped with silky vanilla swirls.</p>
-            <div class="meta"><span>⏱ 35 min</span><span>🍽 Makes 12</span></div>
+            <h3>Chocolate Chip Cookies</h3>
+            <p>The recipe that turns a normal afternoon into a party.</p>
+            <div class="meta"><span>⏱ 25 min</span><span>🍽 Makes ~12</span></div>
           </div>
         </a>
         <a href="recipes.html" class="recipe-card">
@@ -128,7 +136,7 @@
           <div class="body">
             <span class="tag">All Recipes</span>
             <h3>See the full recipe book</h3>
-            <p>Five chapters of bakes — pancakes to sugar-free sweets.</p>
+            <p>Every bake, with the story behind it.</p>
             <div class="meta"><span>→ Browse all</span></div>
           </div>
         </a>
@@ -139,7 +147,7 @@
   <!-- Charity teaser -->
   <section class="about">
     <div class="container">
-      <div class="portrait">🧁</div>
+      <div class="portrait"><img src="assets/journey/ch5/velvety-wonders-cupcake.jpg" alt="Vedhica holding a cupcake she baked"></div>
       <div>
         <p class="eyebrow" style="color: var(--butter);">Baking to Make a Difference</p>
         <h2>50 cupcakes, and counting</h2>
@@ -154,10 +162,10 @@
     <div class="container">
       <div class="box">
         <p class="eyebrow">Never miss a bake</p>
-        <h2>Join the Kitchen Vibes list</h2>
+        <h2>Join the mailing list</h2>
         <p style="color: var(--cocoa-soft);">New recipes, sweet tips and charity updates — sent to a grown-up's inbox.</p>
-        <form>
-          <input type="email" placeholder="your@email.com" required aria-label="Email address">
+        <form data-formsubmit data-subject="New newsletter signup — Vedhica's Kitchen">
+          <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
           <button type="submit" class="btn">Subscribe</button>
         </form>
         <p class="form-note"></p>
